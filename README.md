@@ -1,2 +1,3 @@
 # prepare2odoo
-Preparar o Droplet da Digital Ocean para o odoo
+
+Script de comandos para a preparação do Droplet da Digital Ocean para o odoo
