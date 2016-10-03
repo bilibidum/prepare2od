@@ -7,4 +7,5 @@ Preparando para a execução do script:
 ### Instalando o GIT ###
 
 > sudo apt-get update
+
 > sudo apt-get install git
