@@ -7,40 +7,50 @@
 ################################################################################
 
 clear
-echo -e "\n--- \033[01;32mDigite o nome do novo usuario\033[01;37m ---"
+echo -e "\n--- \033[01;32mDigite um nome para o novo usuario\033[01;37m ---"
 read usuario
 adduser $usuario
 
-echo -e "\n--- \033[01;32mDigite a senha para o novo usuario\033[01;37m ---"
+echo -e "\n--- \033[01;32mDigite uma senha para o novo usuario\033[01;37m ---"
 passwd $usuario
-echo -e "\n--- Transformando o usuario criado em superadmin ---" 
+echo -e "\n--- \033[01;32mTransformando o usuario criado em superadmin\033[01;37m ---" 
 gpasswd -a $usuario sudo
+sleep 3
+echo -e "\n OK!" 
 
-echo -e "\n--- Instalando o \033[01;32mGIT\033[01;37m ---"
+echo -e "\n--- \033[01;32mInstalando o GIT\033[01;37m ---"
 sudo apt-get update
 sudo apt-get install git
+echo -e "\n OK!"
 
-echo -e "\n--- Trocando a porta \033[01;32mSSH: 1221\033[01;37m ---"
+echo -e "\n--- \033[01;32mTrocando a porta SSH: 1221\033[01;37m ---"
 sed -i 's/Port [0-9]\+$/Port 1221/' /etc/ssh/ssh_config
-echo -e "\n--- Abrindo a porta \033[01;32mSSH: 1221\033[01;37m ---" 
+echo -e "\n--- Abrindo a porta \034[01;38mSSH: 1221\033[01;37m ---" 
 sudo ufw allow 1221/tcp
 sleep 5
+echo -e "\n OK!"
 
-echo -e "\n--- Abrindo a porta: 8069 ---" 
+echo -e "\n--- \033[01;32mAbrindo a porta: 8069\033[01;37m ---" 
 sudo ufw allow 8069/tcp
 sleep 2
-echo -e "\n--- Abrindo a porta: 80 ---" 
+echo -e "\n OK!"
+echo -e "\n--- \033[01;32mAbrindo a porta: 80\033[01;37m ---" 
 sudo ufw allow 80/tcp
 sleep 2
-echo -e "\n--- Abrindo a porta: 443 ---" 
+echo -e "\n OK!"
+echo -e "\n--- \033[01;32mAbrindo a porta: 443\033[01;37m ---" 
 sudo ufw allow 443/tcp
 sleep 2
-echo -e "\n--- Abrindo a porta: 25 ---" 
+echo -e "\n OK!"
+echo -e "\n--- \033[01;32mAbrindo a porta: 25\033[01;37m ---" 
 sudo ufw allow 25/tcp
 sleep 2
+echo -e "\n OK!"
 
-echo -e "\n--- Redirecionando a porta 8069 para a porta 80 ---" 
+echo -e "\n--- \033[01;32mRedirecionando a porta 8069 para a porta 80\033[01;37m ---" 
 iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8069
+sleep 3
+echo -e "\n OK!"
 
 ## Configure Timezones ##
 
@@ -59,13 +69,9 @@ sudo mkswap /swapfile
 sudo swapon /swapfile
 
 sudo sh -c 'echo "/swapfile none swap sw 0 0" >> /etc/fstab'
-
-
+echo -e "\n OK!"
+echo ""
+echo ""
 echo -e "\033[01;31m -- CONFIGURAÇAO REALIZADA COM SUCESSO --\033[01;37m"
-
-
-
-
-
-
-
+echo ""
+echo ""
