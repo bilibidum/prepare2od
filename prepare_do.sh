@@ -1,7 +1,8 @@
 #!/bin/bash
 ################################################################################
-# Script for Installation: Digital Ocean - Droplet - Ubuntu 14.04 LTS
+# Script de configuração para Droplets da Digital Ocean 
 #
+# OS = Ubuntu 14.04 LTS
 # Author: Rafael
 #
 ################################################################################
