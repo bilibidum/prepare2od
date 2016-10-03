@@ -48,11 +48,6 @@ sudo ufw allow 25/tcp
 sleep 2
 echo -e "\n OK!"
 
-echo -e "\n--- \033[01;32mRedirecionando a porta 8069 para a porta 80\033[01;37m ---" 
-iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8069
-sleep 3
-echo -e "\n OK!"
-
 ## Configure Timezones ##
 
 sudo dpkg-reconfigure tzdata
