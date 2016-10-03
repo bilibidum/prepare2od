@@ -18,11 +18,6 @@ gpasswd -a $usuario sudo
 sleep 3
 echo -e "\n OK!" 
 
-echo -e "\n--- \033[01;32mInstalando o GIT\033[01;37m ---"
-sudo apt-get update
-sudo apt-get install git
-echo -e "\n OK!"
-
 echo -e "\n--- \033[01;32mTrocando a porta SSH: 1221 \033[01;37m ---"
 sed -i 's/Port [0-9]\+$/Port 1221/' /etc/ssh/ssh_config
 echo -e "\n--- Abrindo a porta \033[01;36mSSH: 1221 \033[01;37m ---" 
