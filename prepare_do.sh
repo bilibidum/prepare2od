@@ -47,7 +47,6 @@ echo -e "\n OK!"
 sudo dpkg-reconfigure tzdata
 
 
-
 echo -e "\n--- Criando SWAP : 2gb ---" 
 
 sudo fallocate -l 2G /swapfile
