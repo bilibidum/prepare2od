@@ -15,6 +15,8 @@ Preparando para a execução do script:
 
 
 #### Executando o script
+> cd prepare2odoo
+
 > chmod +x prepare_do
 
 > sudo sh prepare_do.sh
