@@ -9,3 +9,12 @@ Preparando para a execução do script:
 > sudo apt-get update
 
 > sudo apt-get install git
+
+#### Baixando o script
+> sudo git clone https://github.com/bilibidum/prepare2odoo.git
+
+
+#### Executando o script
+> chmod +x prepare_do
+
+> sudo sh prepare_do.sh
