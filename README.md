@@ -2,7 +2,7 @@
 
 Script de comandos para a preparação do Droplet da Digital Ocean para o odoo
 
-Preparando para a execução do script:
+OS = Ubuntu 14.04 Server
 
 #### Instalando o GIT 
 
