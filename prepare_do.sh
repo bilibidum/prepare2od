@@ -68,6 +68,7 @@ sudo sh -c 'echo "/swapfile none swap sw 0 0" >> /etc/fstab'
 echo -e "\n OK!"
 echo ""
 echo ""
+echo ""
 echo -e "\033[01;31m -- CONFIGURAÇAO REALIZADA COM SUCESSO --\033[01;37m"
 echo ""
 echo ""
