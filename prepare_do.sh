@@ -8,7 +8,7 @@
 ################################################################################
 
 clear
-echo -e "\033[01;32m    INICIANDO A CONFIGURAÇÃO \033[01;37m" 
+echo -e "\n ------ INICIANDO A CONFIGURAÇÃO ------" 
 echo -e "\n " 
 echo -e "\n--- Abrindo a porta SSH: 22 ---" 
 sudo ufw allow 22/tcp
@@ -52,6 +52,8 @@ sudo swapon /swapfile
 
 sudo sh -c 'echo "/swapfile none swap sw 0 0" >> /etc/fstab'
 echo -e "\n OK!"
+cd ..
+rm -R prepare2odoo
 echo -e "\n "
 echo -e "\n "
 echo -e "\n "
