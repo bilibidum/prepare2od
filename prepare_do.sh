@@ -79,7 +79,7 @@ sudo swapon /swapfile
 
 sudo sh -c 'echo "/swapfile none swap sw 0 0" >> /etc/fstab'
 echo -e "\n OK!"
-cd ..
+\cd ..
 sudo rm -R prepare2odoo
 echo -e "\n "
 echo -e "\n "
