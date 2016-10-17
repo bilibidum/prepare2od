@@ -7,7 +7,6 @@
 #
 ################################################################################
 
-clear
 echo -e "\n ------ INICIANDO A CONFIGURAÇÃO ------" 
 echo -e "\n " 
 echo -e "\n--- Abrindo a porta SSH: 22 ---" 
@@ -31,12 +30,6 @@ echo -e "\n--- Abrindo a porta: 25  ---"
 sudo ufw allow 25/tcp
 sleep 2
 echo -e "\n OK!"
-echo -e "\n--- Trocando a porta 8069 pela 80 ---" 
-iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8069
-
-## Configure Timezones ##
-
-sudo dpkg-reconfigure tzdata
 
 echo -e "\n--- Atualizando o sistema ---" 
 sudo apt-get update
@@ -56,6 +49,13 @@ sudo pip install jcconv==0.2.3
 sudo pip install pytz==2014.4
 sudo pip install suds
 sudo pip install suds_requests
+
+sudo apt-get install -y build-essential autoconf libtool pkg-config python-opengl python-imaging python-pyrex python-pyside.qtopengl idle-python2.7 qt4-dev-tools qt4-designer libqtgui4 libqtcore4 libqt4-xml libqt4-test libqt4-script libqt4-network libqt4-dbus python-qt4 python-qt4-gl libgle3 python-dev
+sudo easy_install greenlet
+sudo easy_install gevent
+sudo apt-get install -y libxmlsec1-dev
+sudo pip install https://github.com/aricaldeira/pyxmlsec/archive/master.zip
+sudo pip install --upgrade reportlab
 
 echo -e "\n--- Instalando o wkhtmltopdf ---" 
 cd /tmp
@@ -80,7 +80,7 @@ sudo swapon /swapfile
 sudo sh -c 'echo "/swapfile none swap sw 0 0" >> /etc/fstab'
 echo -e "\n OK!"
 \cd ..
-sudo rm -R prepare2odoo
+sudo rm -R prepare2od
 echo -e "\n "
 echo -e "\n "
 echo -e "\n "
