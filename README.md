@@ -1,6 +1,6 @@
-# PREPARE TO ODOO
+# PREPARE TO OD
 
-Script de comandos para a preparação do Droplet da Digital Ocean para o odoo
+Script de comandos para a preparação do Droplet da Digital Ocean para o od
 
 OS = Ubuntu 14.04 Server
 
@@ -11,11 +11,11 @@ OS = Ubuntu 14.04 Server
 > sudo apt-get install git
 
 #### Baixando o script
-> sudo git clone https://github.com/bilibidum/prepare2odoo.git
+> sudo git clone https://github.com/bilibidum/prepare2od.git
 
 
 #### Executando o script
-> cd prepare2odoo
+> cd prepare2od
 
 > chmod +x prepare_do.sh
 
