@@ -4,7 +4,7 @@ Script de comandos para a preparação do Droplet da Digital Ocean para o od
 
 OS = Ubuntu 14.04 Server
 
-#### Instalando o GIT 
+#### Instalando o GIT (se for necessário)
 
 > sudo apt-get update
 
