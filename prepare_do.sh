@@ -7,31 +7,35 @@
 #
 ################################################################################
 
-echo -e "\n ------ INICIANDO A CONFIGURAÇÃO ------" 
-echo -e "\n " 
-echo -e "\n--- Abrindo a porta SSH: 22 ---" 
+apt-get update
+apt-get dist-upgrade
+apt-get install -y sudo
+sudo apt-get install -y figlet
+clear
+figlet -f standard "Iniciando . . ."
+figlet -f term "--- Abrindo a porta SSH: 22 ---"
 sudo ufw allow 22/tcp
 sleep 5
-echo -e "\n OK!"
+figlet -f term "Feito!"
 
-echo -e "\n--- Abrindo a porta: 8069 ---" 
+figlet -f term "--- Abrindo a porta: 8069 ---"
 sudo ufw allow 8069/tcp
 sleep 2
-echo -e "\n OK!"
+figlet -f term "Feito!"
 echo -e "\n--- Abrindo a porta: 80 ---" 
 sudo ufw allow 80/tcp
 sleep 2
-echo -e "\n OK!"
+figlet -f term "Feito!"
 echo -e "\n--- Abrindo a porta: 443 ---" 
 sudo ufw allow 443/tcp
 sleep 2
-echo -e "\n OK!"
+figlet -f term "Feito!"
 echo -e "\n--- Abrindo a porta: 25  ---" 
 sudo ufw allow 25/tcp
 sleep 2
-echo -e "\n OK!"
+figlet -f term "Feito!"
 
-echo -e "\n--- Atualizando o sistema ---" 
+figlet -f term "--- Atualizando o sistema ---"
 sudo apt-get update
 sudo apt-get dist-upgrade
 sudo apt-get install python-dev python-yaml python-feedparser python-geoip python-imaging python-pybabel python-unicodecsv wkhtmltopdf libxml2-dev libxmlsec1-dev python-argparse python-Babel python-cups python-dateutil python-decorator python-docutils python-feedparser python-gdata pythongevent python-greenlet python-Jinja2 python-libxslt1 python-lxml python-Mako python-MarkupSafe python-mock python-openid python-passlib pythonpsutil python-psycopg2 python-pychart python-pydot python-pyparsing pythonpyPdf python-ldap python-yaml python-reportlab python-requests pythonsimplejson python-six python-tz python-unittest2 python-vatnumber pythonvobject python-webdav python-Werkzeug python-wsgiref python-xlwt python-zsi python-dev libpq-dev poppler-utils python-pdftools antiword
