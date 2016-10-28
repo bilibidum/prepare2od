@@ -121,22 +121,15 @@ sudo python setup.py install
 
 
 figlet -f term "##### Criando SWAP : 2gb #####" 
-
 sudo fallocate -l 2G /swapfile
-
 sudo chmod 600 /swapfile
-
 sudo mkswap /swapfile
-
 sudo swapon /swapfile
-
 sudo sh -c 'echo "/swapfile none swap sw 0 0" >> /etc/fstab'
-figlet -f term " OK!"
-\cd ..
-sudo rm -R prepare2od
+
 figlet -f term " "
 figlet -f term " "
 figlet -f term " "
-figlet -f term "##### CONFIGURAÇAO REALIZADA COM SUCESSO #####"
+figlet -f term "##### SCRIPT FINALIZADA COM SUCESSO #####"
 figlet -f term " "
 figlet -f term " "
