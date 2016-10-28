@@ -84,14 +84,16 @@ sudo locale-gen pt_BR pt_BR.UTF-8
 sudo dpkg-reconfigure locales
 
 figlet -f term "##### Criando LocalizBR #####" 
-sudo su - odoo -s /bin/bash
+cd /opt/odoo
 mkdir localizacao
 cd localizacao
 git clone https://github.com/oca/l10n-brazil.git --branch 8.0 --depth 1
 git clone https://github.com/oca/account-fiscal-rule.git --branch 8.0 --depth 1
 git clone https://github.com/odoo-brazil/odoo-brazil-eletronic-documents.git --branch 8.0 --depth 1
 git clone https://github.com/OCA/server-tools --branch 8.0 --depth 1
-exit
+cd /opt/odoo
+sudo chown -R odoo:odoo localizacao
+chmod  -R   755 localizacao
 cd /tmp
 git clone https://github.com/odoo-brazil/geraldo --branch master
 cd geraldo
