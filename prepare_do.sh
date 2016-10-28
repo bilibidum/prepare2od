@@ -11,6 +11,7 @@ apt-get update
 apt-get dist-upgrade
 apt-get install -y sudo
 sudo apt-get install -y figlet
+sudo /etc/init.d/odoo-server stop
 clear
 figlet -f standard "Iniciando . . ."
 figlet -f term "### Abrindo a porta SSH: 22 #####"
