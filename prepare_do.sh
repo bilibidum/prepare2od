@@ -14,30 +14,9 @@ sudo apt-get install -y figlet
 sudo /etc/init.d/odoo-server stop
 clear
 figlet -f standard "Iniciando . . ."
-figlet -f term "### Abrindo a porta SSH: 22 #####"
-sudo ufw allow 22/tcp
-sleep 5
-figlet -f term "Feito!"
-
-figlet -f term "##### Abrindo a porta: 8069 #####"
-sudo ufw allow 8069/tcp
-sleep 2
-figlet -f term "Feito!"
-
-figlet -f term "##### Abrindo a porta: 80 #####" 
-sudo ufw allow 80/tcp
-sleep 2
-figlet -f term "Feito!"
-
-figlet -f term "##### Abrindo a porta: 443 #####" 
-sudo ufw allow 443/tcp
-sleep 2
-figlet -f term "Feito!"
-figlet -f term "##### Abrindo a porta: 25  #####" 
-sudo ufw allow 25/tcp
-sleep 2
-figlet -f term "Feito!"
-
+figlet -f term " "
+figlet -f term " "
+figlet -f term " "
 figlet -f term "##### Atualizando o sistema #####"
 sudo apt-get update
 sudo apt-get dist-upgrade
