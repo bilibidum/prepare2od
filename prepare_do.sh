@@ -61,17 +61,7 @@ export LANG=pt_BR.UTF-8
 sudo locale-gen pt_BR pt_BR.UTF-8
 sudo dpkg-reconfigure locales
 
-figlet -f term "##### Criando LocalizBR #####" 
-cd /opt/odoo
-mkdir localizacao
-cd localizacao
-git clone https://github.com/oca/l10n-brazil.git --branch 8.0 --depth 1
-git clone https://github.com/oca/account-fiscal-rule.git --branch 8.0 --depth 1
-git clone https://github.com/odoo-brazil/odoo-brazil-eletronic-documents.git --branch 8.0 --depth 1
-git clone https://github.com/OCA/server-tools --branch 8.0 --depth 1
-cd /opt/odoo
-sudo chown -R odoo:odoo localizacao
-chmod  -R   755 localizacao
+figlet -f term "##### Instalando Geraldo #####" 
 cd /tmp
 git clone https://github.com/odoo-brazil/geraldo --branch master
 cd geraldo
@@ -98,8 +88,8 @@ cd pyxmlsec
 sudo python setup.py install
 
 
-figlet -f term "##### Criando SWAP : 2gb #####" 
-sudo fallocate -l 2G /swapfile
+figlet -f term "##### Criando SWAP : 1gb #####" 
+sudo fallocate -l 1G /swapfile
 sudo chmod 600 /swapfile
 sudo mkswap /swapfile
 sudo swapon /swapfile
