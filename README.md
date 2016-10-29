@@ -27,6 +27,8 @@ OS = Ubuntu 14.04 Server
 
 > git clone https://github.com/OCA/server-tools --branch 8.0 --depth 1
 
+> git clone https://github.com/OCA/reporting-engine.git --branch 8.0 --depth 1
+
 > exit
 
 
