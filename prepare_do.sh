@@ -55,7 +55,6 @@ wkhtmltopdf -–version
 
 figlet -f term "##### Configurando locales #####" 
 sudo apt-get update
-sudo apt-get upgrade -y
 sudo apt-get install -y locales
 export LANGUAGE=pt_BR.UTF-8
 export LANG=pt_BR.UTF-8
